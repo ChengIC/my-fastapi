@@ -5,3 +5,12 @@
 
 
 ## Test
+1. Run the tests: `pytest tests/test_todo.py -v`
+
+
+## TO DO BEFORE PRODUCTION
+- [ ] Add authentication and authorization for different users
+- [ ] Connect to a database such as PostgreSQL storage for the TODO list data
+- [ ] Test the API endpoints, database, and authentication and authorization
+- [ ] Dockerize the application
+- [ ] Build a CI/CD pipeline
