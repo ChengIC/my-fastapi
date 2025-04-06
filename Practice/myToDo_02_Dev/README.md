@@ -9,6 +9,7 @@
 
 
 ## TO DO BEFORE PRODUCTION
+- [ ] Add logging for bugs and errors 
 - [ ] Add authentication and authorization for different users
 - [ ] Connect to a database such as PostgreSQL storage for the TODO list data
 - [ ] Test the API endpoints, database, and authentication and authorization
