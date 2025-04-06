@@ -1,4 +1,5 @@
-from pydantic_settings import BaseSettings, ConfigDict
+from pydantic_settings import BaseSettings
+from pydantic import ConfigDict
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "Todo API (In-Memory)"
