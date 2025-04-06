@@ -4,7 +4,7 @@ fast-api template for practice
 ## Full-Stack FastAPI Project (large-scale)
 ![FastAPI Full-Stack Project Architecture](large_project_architecture.png)
 
-The architecture of a full-stack FastAPI project is shown in the diagram above, illustrating a scalable structure with separate components of:
+The architecture of an example of a full-stack FastAPI project is shown in the diagram above, illustrating a scalable structure with separate components of:
 
 - `main.py`: Entry point of the project, launches the FastAPI application.
 - `core/`: Core functionality, including configuration and security.
@@ -40,7 +40,7 @@ It is worth noting that there is no standard answer for any scale of a FastAPI p
 The architecture of the project should be flexible and can be adjusted based on the project's requirements and complexity. 
 
 ## Tiny FastAPI Project
-For a total new project (e.g. a company's new API service has not been built before), we always start with a tiny scale project and then gradually build it up from tiny scale to small/medium scale then to large scale. 
+For a total new project (e.g. a company's new API service has not been built before), we always start with a tiny scale project and then gradually build it up from tiny scale to small/medium scale then to large scale. Otherwise, building with a large scale project template at the beginning may lead to over-engineering and waste of time. 
 
 We can simply use the `main.py` file to launch the FastAPI application, and then connect the database, enhance the authentication, schema validation, and refactor the function modules and folders as the project grows.
 
