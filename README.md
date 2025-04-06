@@ -29,20 +29,16 @@ The architecture patterns across these frameworks share similarities. For exampl
 1. Django's built-in migrations are functionally analogous to Alembic (used with FastAPI/SQLAlchemy).
 2. Django's Model system serves a similar purpose to FastAPI's Pydantic models (for data validation) and SQLAlchemy models (for database interaction).
 
-## Microservice Architecture of FastAPI (small/medium-scale)
-Instead of setting every folders for the components, we can simplify the project structure by using one of the following architecture.
 
-![FastAPI Microservice Architecture](small_project_architecture.png)
+## Real-world FastAPI Project (see the example in `Practice` folder)
+In practice, we often use FastAPI as a microservice component within a broader ecosystem, often integrated with services built on frameworks like Flask, Django, or Spring Boot.
 
-## Comment on the microservice architecture
-It is worth noting that there is no standard answer for any scale of a FastAPI project. For example, we combine `schemas` and `models` into one module in this example if we don't have complex data validation. However, we can also have a separate `schemas` function module when validation is complicated, especially when we have various data models needed to be validated (e.g., validating the LLM agent status and intermediate response in a long multiple-step task). 
+Initially, we start with a single `main.py` file to launch the FastAPI application, as shown in the `myToDo_01_Draft` folder.
 
-The architecture of the project should be flexible and can be adjusted based on the project's requirements and complexity. 
+During the development, we refactor the code into multiple modules for scalability and testability, as shown in the `myToDo_02_Dev` folder.
 
-## Tiny FastAPI Project
-For a total new project (e.g. a company's new API service has not been built before), we always start with a tiny scale project and then gradually build it up from tiny scale to small/medium scale then to large scale. Otherwise, building with a large scale project template at the beginning may lead to over-engineering and waste of time. 
+For final production, we connect the application to the database, deploy the application with Docker, add the authentication, enhance the schema validation, CI/CD as shown in the `myToDo_03_Prod` folder.
 
-We can simply use the `main.py` file to launch the FastAPI application, and then connect the database, enhance the authentication, schema validation, and refactor the function modules and folders as the project grows.
 
 The API can be built with the following steps:
 1. **Carify the API design**: e.g. the API endpoints, routes, request/response schema, etc.
@@ -52,7 +48,6 @@ The API can be built with the following steps:
 5. **Refactoring**: refactor the code to improve the readability and scalability.
 6. **Deployment**: docker, GitHub Actions, etc.
 
-## Example of Tiny FastAPI Project
-
+However, the steps are not always linear. We often iterate all the steps above multiple times before the release of every version of the API.
 
 
